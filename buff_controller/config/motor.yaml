@@ -1,0 +1,15 @@
+rm_hw:
+  bus:
+    - can0
+    - can1
+  loop_frequency: 100
+  cycle_time_error_threshold: 0.001
+  thread_priority: 95
+  # Configurations of the actuators
+  actuators:
+    motors:
+      bus: can0
+      id: 0x201
+      type: rm_2006
+      lp_cutoff_frequency: 30
+      need_calibration: true

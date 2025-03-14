@@ -1,0 +1,15 @@
+controller:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+  buff_controller:
+    type: buff_controller/BuffController
+    joint: wheel_joint
+    pid:
+      p: 0.3
+      i: 0
+      d: 0
+    publish_rate: 50
+    feedforward:
+      enable: false
+      k_f: 0.5
